@@ -20,8 +20,8 @@ An implementation of the AES-128 (Advanced Encryption Standard) encryption algor
 ### Installation
 
 ```bash
-git clone https://github.com/ErikPeter2000/aes128_test
-cd aes128_test
+git clone https://github.com/erikhurinek/aes128_impl
+cd aes128_impl
 cargo build --release
 ```
 
@@ -46,7 +46,7 @@ aes_test/
 ├── README.md               # This file
 ├── src/
 │   ├── main.rs             # Demo application
-│   ├── aes_test.rs         # AES-128 implementation
+│   ├── aes.rs              # AES-128 implementation
 │   ├── lookup.rs           # S-box and RCON lookup tables
 │   └── util.rs             # State management and transformations
 └── text/
@@ -75,3 +75,4 @@ rand = "0.10.1"     # Random number generation for key generation
 - Uses 128-bit keys only (no support for 192-bit or 256-bit keys)
 - Implements ECB mode for simplicity (not recommended for secure encryption)
 - For production use, consider using the [aes crate](https://docs.rs/aes/latest/aes/) with hardware acceleration
+
